@@ -13,3 +13,9 @@ CTemplStack<T>::CTemplStack(size_t size)
 	_size = size;
 	_stack = new T[_size];
 }
+
+template<class T>
+CTemplStack<T>::~CTemplStack()
+{
+	delete[] _stack;
+}
