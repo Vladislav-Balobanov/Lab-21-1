@@ -31,7 +31,7 @@ protected:
 	void createObject();
 private:
 	// Объект в стэке:
-	T _object;
+	T* _stack;
 	// Размер стэка:
 	size_t _size;
 };
