@@ -6,6 +6,7 @@ template<class T>
 inline CTemplStack<T>::CTemplStack()
 {
 	_size = 1;
+	_top = _size--;
 	_stack = new T[_size];
 }
 
@@ -13,6 +14,7 @@ template<class T>
 CTemplStack<T>::CTemplStack(size_t size)
 {
 	_size = size;
+	_top = _size--;
 	_stack = new T[_size];
 }
 
@@ -27,7 +29,7 @@ bool CTemplStack<T>::addToStack(T object)
 {
 	try
 	{
-		if (_size == 0)
+		if (_top == -1)
 			throw std::out_of_range;
 
 		_stack[_size - 1] = object;

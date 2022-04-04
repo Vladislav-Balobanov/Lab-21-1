@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 
-#define ushort unsigned short;
+#define ushort unsigned short
 
 /// <summary>
 /// Класс реализующий стэк.
@@ -37,6 +37,6 @@ private:
 	// Размер стэка:
 	size_t _size;
 	// Индекс верхнего элемента:
-	ushort top;
+	ushort _top;
 };
 
