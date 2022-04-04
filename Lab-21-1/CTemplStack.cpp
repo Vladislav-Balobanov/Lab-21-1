@@ -38,3 +38,10 @@ bool CTemplStack<T>::addToStack(T object)
 		return false;
 	}
 }
+
+template<class T>
+bool CTemplStack<T>::extractFromStack(T object)
+{
+
+	return false;
+}

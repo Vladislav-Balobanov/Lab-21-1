@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 
+#define ushort unsigned short;
+
 /// <summary>
 /// Класс реализующий стэк.
 /// </summary>
@@ -34,5 +36,7 @@ private:
 	T* _stack;
 	// Размер стэка:
 	size_t _size;
+	// Индекс верхнего элемента:
+	ushort top;
 };
 
