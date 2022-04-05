@@ -140,9 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CTemplStack.h" />
+    <ClInclude Include="EStackException.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CTemplStack.cpp" />
+    <ClCompile Include="EStackException.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
