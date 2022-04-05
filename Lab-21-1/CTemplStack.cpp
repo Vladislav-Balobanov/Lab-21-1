@@ -1,6 +1,7 @@
 #include "CTemplStack.h"
 #include <iostream>
 #include <exception>
+#include <stack>
 
 template<class T>
 inline CTemplStack<T>::CTemplStack()
@@ -29,7 +30,7 @@ bool CTemplStack<T>::addToStack(T object)
 {
 	try
 	{
-		if (_top == -1)
+		if (_top < 0)
 			throw std::out_of_range;
 
 		_stack[_size - 1] = object;
@@ -42,8 +43,16 @@ bool CTemplStack<T>::addToStack(T object)
 }
 
 template<class T>
-bool CTemplStack<T>::extractFromStack(T object)
+T CTemplStack<T>::extractFromStack()
 {
-
-	return false;
+	try
+	{
+		if (_top < 0)
+			throw EStacEmpty();
+		return _stack[_top];
+	}
+	catch (...)
+	{
+		return NULL;
+	}
 }

@@ -26,7 +26,7 @@ public:
 	// Добавление в стэк:
 	bool addToStack(T object);
 	// Удаление из стэка:
-	bool extractFromStack(T object);
+	T extractFromStack();
 	// Получить размер стэка:
 	size_t getSizeOfStack();
 protected:
