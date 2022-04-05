@@ -1,7 +1,7 @@
 #include "CTemplStack.h"
+#include "EStackException.h"
 #include <iostream>
 #include <exception>
-#include <stack>
 
 template<class T>
 inline CTemplStack<T>::CTemplStack()
@@ -48,7 +48,7 @@ T CTemplStack<T>::extractFromStack()
 	try
 	{
 		if (_top < 0)
-			throw EStacEmpty();
+			throw EStackEmpty;
 		return _stack[_top];
 	}
 	catch (...)

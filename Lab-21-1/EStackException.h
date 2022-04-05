@@ -3,7 +3,12 @@
 #include <iostream>
 class EStackException
 {
-private:
-	std::exception EStackEmpty;
+	
+;
+};
+
+ class EStackEmpty : public EStackException
+{
+
 };
 
