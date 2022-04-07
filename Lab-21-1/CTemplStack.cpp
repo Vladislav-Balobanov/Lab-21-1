@@ -33,7 +33,7 @@ bool CTemplStack<T>::addToStack(T object)
 		if (_top < 0)
 			throw std::out_of_range;
 
-		_stack[_size - 1] = object;
+		_stack[_top] = object;
 		return true;
 	}
 	catch (std::out_of_range ex)
