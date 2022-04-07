@@ -56,3 +56,9 @@ T CTemplStack<T>::extractFromStack()
 		return NULL;
 	}
 }
+
+template<class T>
+size_t CTemplStack<T>::getSizeOfStack()
+{
+	return _size;
+}
