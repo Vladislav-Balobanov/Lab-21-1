@@ -32,8 +32,6 @@ public:
 private:
 	// Объект в стэке:
 	T* _stack;
-	// Размер стэка:
-	size_t _size;
 	// Индекс верхнего элемента:
 	ushort _top;
 };
