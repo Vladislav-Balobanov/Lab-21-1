@@ -29,8 +29,6 @@ public:
 	T extractFromStack();
 	// Получить размер стэка:
 	size_t getSizeOfStack();
-protected:
-	void createObject();
 private:
 	// Объект в стэке:
 	T* _stack;
