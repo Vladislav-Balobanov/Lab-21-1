@@ -33,11 +33,10 @@ bool CTemplStack<T>::push(T object)
 		if (_size <= 0)
 			throw EStackEmpty("Stack is empty!");
 		_stack[_top] = object;
-		return true;
 	}
 	catch (const EStackEmpty& Exc)
 	{
-		return false;
+		return true;
 	}
 }
 
