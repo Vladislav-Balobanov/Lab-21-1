@@ -30,13 +30,12 @@ bool CTemplStack<T>::push(T object)
 {
 	try
 	{
-		if (_top < 0)
-			throw std::out_of_range;
-
+		if (_size <= 0)
+			throw EStackEmpty("Stack is empty!");
 		_stack[_top] = object;
 		return true;
 	}
-	catch (std::out_of_range ex)
+	catch (const EStackEmpty& Exc)
 	{
 		return false;
 	}
