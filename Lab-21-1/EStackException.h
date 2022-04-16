@@ -28,3 +28,11 @@ public:
 	 explicit EStackEmpty(const EStackEmpty& exception) : EStackException(exception) {}
 };
 
+ class EStackOverflow : public EStackException
+ {
+ public:
+	 explicit EStackOverflow(const std::string& _message) : EStackException(_message) {}
+	 explicit EStackOverflow(const EStackOverflow& exception) : EStackException(exception) {}
+
+ };
+
