@@ -28,16 +28,11 @@ CTemplStack<T>::~CTemplStack()
 template<class T>
 bool CTemplStack<T>::push(T object)
 {
-	try
-	{
-		if (_size <= 0)
-			throw EStackEmpty("Stack is empty!");
-		_stack[_top] = object;
-	}
-	catch (const EStackEmpty& Exc)
-	{
-		return true;
-	}
+	if (_size <= 0)
+		throw EStackEmpty("Stack is empty!");
+	else if (_top >= _size)
+		throw EStackOverflow("Stack Overflow!");
+	_stack[_top] = object;
 }
 
 template<class T>
