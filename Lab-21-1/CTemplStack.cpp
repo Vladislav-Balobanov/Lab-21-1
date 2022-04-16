@@ -43,7 +43,7 @@ bool CTemplStack<T>::push(T object)
 }
 
 template<class T>
-T CTemplStack<T>::extractFromStack()
+T CTemplStack<T>::pop()
 {
 	try
 	{
