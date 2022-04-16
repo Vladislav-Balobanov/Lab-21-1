@@ -43,16 +43,11 @@ bool CTemplStack<T>::push(T object)
 template<class T>
 T CTemplStack<T>::pop()
 {
-	try
-	{
-		if (_top < 0)
-			throw EStackEmpty;
-		return _stack[_top];
-	}
-	catch (...)
-	{
-		return NULL;
-	}
+	if (_size <= 0)
+		throw EStackEmpty("Stack is Empty!");
+	else if (_top >= _size)
+		throw EStackOverflow("Stack Overflow!");
+	return _stack[_top];
 }
 
 template<class T>
