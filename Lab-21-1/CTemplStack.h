@@ -36,5 +36,6 @@ private:
 	size_t _size;
 	// Индекс верхнего элемента:
 	ushort _top;
+	ushort _first;
 };
 

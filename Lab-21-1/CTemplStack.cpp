@@ -32,6 +32,12 @@ bool CTemplStack<T>::push(T object)
 		throw EStackEmpty("Stack is empty!");
 	else if (_top >= _size)
 		throw EStackOverflow("Stack Overflow!");
+	T temp;
+	for(int i = _top - 1; ; i--)
+	{
+		temp = _stack[];
+
+	}
 	_stack[_top] = object;
 }
 
