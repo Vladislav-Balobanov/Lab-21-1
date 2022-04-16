@@ -23,6 +23,8 @@ public:
 
  class EStackEmpty : public EStackException
 {
-	
+public:
+	 explicit EStackEmpty(std::string _message) : EStackException(_message) {}
+	 explicit EStackEmpty(const EStackEmpty& exception) : EStackException(exception) {}
 };
 
