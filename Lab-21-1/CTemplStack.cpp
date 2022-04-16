@@ -48,5 +48,7 @@ T CTemplStack<T>::pop()
 template<class T>
 size_t CTemplStack<T>::getSizeOfStack()
 {
+	if (_size <= 0)
+		throw EStackEmpty("Stack is Empty!");
 	return _size;
 }
