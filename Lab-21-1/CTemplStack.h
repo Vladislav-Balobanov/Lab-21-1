@@ -24,7 +24,7 @@ public:
 
 	// @Short
 	// Добавление в стэк:
-	bool addToStack(T object);
+	bool push(T object);
 	// Удаление из стэка:
 	T extractFromStack();
 	// Получить размер стэка:

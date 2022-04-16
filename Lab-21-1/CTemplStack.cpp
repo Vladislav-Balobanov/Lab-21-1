@@ -26,7 +26,7 @@ CTemplStack<T>::~CTemplStack()
 }
 
 template<class T>
-bool CTemplStack<T>::addToStack(T object)
+bool CTemplStack<T>::push(T object)
 {
 	try
 	{
